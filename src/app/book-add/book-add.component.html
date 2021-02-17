@@ -1,0 +1,7 @@
+<h3>اضافة كتاب</h3>
+<form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
+    <input formControlName="title" placeholder="عنوان الكتاب">
+    <input formControlName="author" placeholder="مؤلف الكتاب">
+    <input formControlName="cover" placeholder="غلاف الكتاب">
+    <button>حفظ</button>
+</form>
