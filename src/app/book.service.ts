@@ -9,9 +9,38 @@ export class BookService {
 
   constructor(private http: HttpClient) { }
 
-  add(book) {
-    this.http.post(this.apiUrl + 'save', book, {headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })}).subscribe()
+  getAll() {
+    return this.http.get(this.apiUrl + 'books');
+  }
+
+  getOneById(id) {
+    return this.http.get(this.apiUrl + id)
+  }
+
+  save(book) {
+    this.http.post(this.apiUrl + 'save', book, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    })
+    .subscribe()
+  }
+
+  update(book) {
+    this.http.post(this.apiUrl + 'update', book, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    })
+    .subscribe()
+  }
+
+  delete(id) {
+    this.http.post(this.apiUrl + 'delete', {id: id}, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    })
+    .subscribe()
   }
 }

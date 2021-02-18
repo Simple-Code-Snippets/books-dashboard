@@ -1,21 +1,92 @@
-h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-  }
-  h2, h3 {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-  }
-  body {
-    margin: 2em;
-  }
-  body, input[type="text"], button {
-    color: #333;
-    font-family: Cambria, Georgia, serif;
-  }
-  /* everywhere else */
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+body {
+  font-family: 'Amiri';
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+
+}
+main {
+  width: 80%;
+}
+input {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+table {
+  border-collapse: collapse;
+  white-space:nowrap;
+}
+th {
+  background-color: #eee;
+  font-weight: 100;
+  color: #666
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+  vertical-align: middle;
+}
+tr:hover {
+  background-color: rgba(238, 238, 238, 0.493);
+}
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+svg {
+  display: inline-block;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+.controls a {
+  background-color: transparent;
+  border: 0;
+  display: inline-block;
+  padding: 1px 4px;
+}
+.controls a:hover {
+  cursor: pointer;
+}
+img {
+  border-radius: 8px;
+}
+img:hover {
+  box-shadow: 0 1px 6px 1px rgb(199, 196, 196);
+}
+h3 {
+  display: inline-block;
+}
+input {
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  font-family: 'Amiri';
+}
+input:hover, input:focus {
+  border: 1px solid #4691f6;
+}
+form button {
+  border: 0;
+  font-family: 'Amiri';
+  background-color: #4691f6;
+  color: white;
+  padding: 6px 16px;
+}
+
+form button:hover {
+  background-color: #235aa1;
+}
